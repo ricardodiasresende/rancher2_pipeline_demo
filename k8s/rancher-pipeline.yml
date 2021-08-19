@@ -26,7 +26,7 @@ stages:
 timeout:60
 notification:
   recipients:
-  - recipient: '#rancher-notification'
+  - recipient: '#rancher-notifications'
     notifier: c-55nbm:n-zp4hf
   condition:
   - Success
