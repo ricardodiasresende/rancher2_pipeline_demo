@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: harbor.kacsh.com/library/pipleline-demo:${CICD_GIT_COMMIT}
       pushRemote: true
-      registry: harbor.kacsh.com
+      registry: rancher2.cade.gov.br
   when:
     branch:
       include:
