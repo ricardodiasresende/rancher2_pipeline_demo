@@ -4,7 +4,7 @@ stages:
  -publishImageConfig:
     dockerfilePath: ./docker/Dockerfile
     buildContext: .
-    tag: harbor.kacsh.com/libray/pipleline-demo:${CICD_GIT_COMMIT}
+    tag: rancher2.cade.gov.br/libray/pipleline-demo:${CICD_GIT_COMMIT}
     pushRemote: true
     registry: rancher2.cade.gov.br
  when:
@@ -30,5 +30,5 @@ notification:
   notifier: c-55nbm:n-zp4hf
 condition:
 -Success
-_Changed
+-Changed
 -Failed
