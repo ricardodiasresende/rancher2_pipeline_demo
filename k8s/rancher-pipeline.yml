@@ -6,14 +6,18 @@ stages:
     buildContext: .
     tag: harbor.kacsh.om/libray/pipeline-demo:${CICD_GIT_COMMIT}
     pushRemote: true
-    registry: harbor.kacsh.com
+    registry: rancher2.cade.gov.br
  when:
     branch:
       include:
       - master
 -name: Deploy
  steps:
- =runScriptConfig:
+ -applyYamlConfig:
+    path: ./k8s/deployment.yaml
+-name: Build something
+ steps:
+ -runScriptConfig:
     image: busybox
     shellScript: echo ${FIRST_KEY} && echo ${SECOND_KEY}
   env:
