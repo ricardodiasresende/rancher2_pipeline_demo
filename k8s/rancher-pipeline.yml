@@ -4,7 +4,7 @@ stages:
  -publishImageConfig:
     dockerfilePath: ./docker/Dockerfile
     buildContext: .
-    tag: harbor.kacsh.om/libray/pipeline-demo:${CICD_GIT_COMMIT}
+    tag: harbor.kacsh.com/libray/pipeline-demo:${CICD_GIT_COMMIT}
     pushRemote: true
     registry: rancher2.cade.gov.br
  when:
