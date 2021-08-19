@@ -25,7 +25,7 @@ metadata:
   name: nginx-pipeline-demo-service
   namespace: pipeline-demo
   annotations:
-    external-dns.alpha.kubernetes.io: pipeline-demo.opsmonkeys.com
+    external-dns.alpha.kubernetes.io: pipeline-demo.rancher2.cade.gov.br
 spec:
   selector:
     app: nginx
@@ -35,13 +35,13 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: pipeline-demo.opsmonkeys.com
+  name: pipeline-demo.rancher2.cade.gov.br
   namespace: pipeline-demo
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: pipeline-demo.opsmonkeys.com
+    - host: pipeline-demo.rancher2.cade.gov.br
       http:
         paths:
           - path: /
