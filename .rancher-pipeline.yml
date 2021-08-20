@@ -5,7 +5,7 @@ stages:
       dockerfilePath: ./docker/Dockerfile
       buildContext: .
       tag: rancher2.cade.gov.br/library/pipleline-demo:${CICD_GIT_COMMIT}
-      pushRemote: true
+      pushRemote: false
       registry: rancher2.cade.gov.br
   when:
     branch:
